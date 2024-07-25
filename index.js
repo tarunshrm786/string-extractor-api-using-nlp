@@ -299,7 +299,7 @@
 //     }
 // });
 
-
+//work good as ai
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -310,11 +310,7 @@ const port = 7000;
 
 app.use(bodyParser.json());
 
-// // Configure CORS to allow requests from http://localhost:3000
-// const corsOptions = {
-//     origin: 'http://localhost:3000',
-//     optionsSuccessStatus: 200
-// };
+
 // Configure CORS to allow requests from specified origins
 const allowedOrigins = [
     'http://localhost:3000',
@@ -427,7 +423,7 @@ app.listen(port, () => {
 
 // Example usage
 let paragraphs = [
-    "That the bail application moved on behalf of applicant and another which has been rejected by Ld. Additional Sessions Judge, Court No. 1, Meerut vide order dated 03.01.2024 without considering the merits and facts of the case of dated 21.03.2024. A certified free copy of Mr. bail rejection order i.e., dated 03.01.2024 provided to applicant is being annexed as Annexure No. 1 with this affidavit."
+    "That thereafter Investigating Officer claims to have recorded the further statement of informant/alleged eye witness by means of parcha no. 7 dated 03.08.2023, with material improvement only with a view to implicate applicant somehow, the story stated by alleged eye witness is completely unreliable and unnatural which itself sounds like it has been made up upon someone’s advice. In the same parcha Investigating Officer claims to have recorded the statement of Warish Ahmed and Smt. Rehana. A photocopy of further statement of informant and statement of Warish Ahmed and Smt. Rehana are collectively being filed herewith and marked as Annexure No. 11 with this affidavit."
 ];
 
 paragraphs.forEach(paragraph => {
@@ -437,3 +433,5 @@ paragraphs.forEach(paragraph => {
         console.log('Dates:', extractedText.dates);
     }
 });
+
+
