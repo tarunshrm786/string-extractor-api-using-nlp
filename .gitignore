@@ -1,0 +1,21 @@
+# Node modules
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Mac system files
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Operating system files
+Thumbs.db
