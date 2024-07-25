@@ -310,9 +310,25 @@ const port = 7000;
 
 app.use(bodyParser.json());
 
-// Configure CORS to allow requests from http://localhost:3000
+// // Configure CORS to allow requests from http://localhost:3000
+// const corsOptions = {
+//     origin: 'http://localhost:3000',
+//     optionsSuccessStatus: 200
+// };
+// Configure CORS to allow requests from specified origins
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://my-doc-converter.vercel.app'
+];
+
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: (origin, callback) => {
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     optionsSuccessStatus: 200
 };
 
